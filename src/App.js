@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 
-
 import Weathercalls from "./components/Weathercalls";
 
 /*
@@ -12,7 +11,6 @@ import Weathercalls from "./components/Weathercalls";
   */
 
 export default class App extends React.Component {
- 
   render() {
     return (
       <div>
@@ -26,4 +24,3 @@ export default class App extends React.Component {
     );
   }
 }
-
