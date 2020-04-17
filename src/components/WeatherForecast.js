@@ -1,4 +1,5 @@
 import React from "react";
+import "./Weathercalls.css";
 
 export default class WeatherForecast extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export default class WeatherForecast extends React.Component {
   }
 
   toggleOne() {
-    if (this.state.show == 1) {
+    if (this.state.show === 1) {
       this.setState({
         show: "",
       });
@@ -26,7 +27,7 @@ export default class WeatherForecast extends React.Component {
   }
 
   toggleTwo() {
-    if (this.state.show == 2) {
+    if (this.state.show === 2) {
       this.setState({
         show: "",
       });
@@ -38,7 +39,7 @@ export default class WeatherForecast extends React.Component {
   }
 
   toggleThree() {
-    if (this.state.show == 3) {
+    if (this.state.show === 3) {
       this.setState({
         show: "",
       });
@@ -50,7 +51,7 @@ export default class WeatherForecast extends React.Component {
   }
 
   toggleFour() {
-    if (this.state.show == 4) {
+    if (this.state.show === 4) {
       this.setState({
         show: "",
       });
@@ -69,112 +70,104 @@ export default class WeatherForecast extends React.Component {
       case 1:
         content = (
           <div>
-            <p>Forecast day one</p>
-            <p>{this.props.dayOne}</p>
             <h3>00.00</h3>
-            <p>{this.props.temperatureForecastArr[0]}</p>
+            <p>{this.props.temperatureForecastArr[0]}°</p>
             <h3>03.00</h3>
-            <p>{this.props.temperatureForecastArr[1]}</p>
+            <p>{this.props.temperatureForecastArr[1]}°</p>
             <h3>06.00</h3>
-            <p>{this.props.temperatureForecastArr[2]}</p>
+            <p>{this.props.temperatureForecastArr[2]}°</p>
             <h3>09.00</h3>
-            <p>{this.props.temperatureForecastArr[3]}</p>
+            <p>{this.props.temperatureForecastArr[3]}°</p>
             <h3>12.00</h3>
-            <p>{this.props.temperatureForecastArr[4]}</p>
+            <p>{this.props.temperatureForecastArr[4]}°</p>
             <h3>15.00</h3>
-            <p>{this.props.temperatureForecastArr[5]}</p>
+            <p>{this.props.temperatureForecastArr[5]}°</p>
             <h3>18.00</h3>
-            <p>{this.props.temperatureForecastArr[6]}</p>
+            <p>{this.props.temperatureForecastArr[6]}°</p>
             <h3>21.00</h3>
-            <p>{this.props.temperatureForecastArr[7]}</p>
+            <p>{this.props.temperatureForecastArr[7]}°</p>
           </div>
         );
         break;
       case 2:
         content = (
           <div>
-            <p>Forecast day two</p>
-            <p>{this.props.dayTwo}</p>
             <h3>00.00</h3>
-            <p>{this.props.temperatureForecastArr[8]}</p>
+            <p>{this.props.temperatureForecastArr[8]}°</p>
             <h3>03.00</h3>
-            <p>{this.props.temperatureForecastArr[9]}</p>
+            <p>{this.props.temperatureForecastArr[9]}°</p>
             <h3>06.00</h3>
-            <p>{this.props.temperatureForecastArr[10]}</p>
+            <p>{this.props.temperatureForecastArr[10]}°</p>
             <h3>09.00</h3>
-            <p>{this.props.temperatureForecastArr[11]}</p>
+            <p>{this.props.temperatureForecastArr[11]}°</p>
             <h3>12.00</h3>
-            <p>{this.props.temperatureForecastArr[12]}</p>
+            <p>{this.props.temperatureForecastArr[12]}°</p>
             <h3>15.00</h3>
-            <p>{this.props.temperatureForecastArr[13]}</p>
+            <p>{this.props.temperatureForecastArr[13]}°</p>
             <h3>18.00</h3>
-            <p>{this.props.temperatureForecastArr[14]}</p>
+            <p>{this.props.temperatureForecastArr[14]}°</p>
             <h3>21.00</h3>
-            <p>{this.props.temperatureForecastArr[15]}</p>
+            <p>{this.props.temperatureForecastArr[15]}°</p>
           </div>
         );
         break;
       case 3:
         content = (
           <div>
-            <p>Forecast day three</p>
-            <p>{this.props.dayThree}</p>
             <h3>00.00</h3>
-            <p>{this.props.temperatureForecastArr[16]}</p>
+            <p>{this.props.temperatureForecastArr[16]}°</p>
             <h3>03.00</h3>
-            <p>{this.props.temperatureForecastArr[17]}</p>
+            <p>{this.props.temperatureForecastArr[17]}°</p>
             <h3>06.00</h3>
-            <p>{this.props.temperatureForecastArr[18]}</p>
+            <p>{this.props.temperatureForecastArr[18]}°</p>
             <h3>09.00</h3>
-            <p>{this.props.temperatureForecastArr[19]}</p>
+            <p>{this.props.temperatureForecastArr[19]}°</p>
             <h3>12.00</h3>
-            <p>{this.props.temperatureForecastArr[20]}</p>
+            <p>{this.props.temperatureForecastArr[20]}°</p>
             <h3>15.00</h3>
-            <p>{this.props.temperatureForecastArr[21]}</p>
+            <p>{this.props.temperatureForecastArr[21]}°</p>
             <h3>18.00</h3>
-            <p>{this.props.temperatureForecastArr[22]}</p>
+            <p>{this.props.temperatureForecastArr[22]}°</p>
             <h3>21.00</h3>
-            <p>{this.props.temperatureForecastArr[23]}</p>
+            <p>{this.props.temperatureForecastArr[23]}°</p>
           </div>
         );
         break;
       case 4:
         content = (
           <div>
-            <p>Forecast day four</p>
-            <p>{this.props.dayFour}</p>
             <h3>00.00</h3>
-            <p>{this.props.temperatureForecastArr[24]}</p>
+            <p>{this.props.temperatureForecastArr[24]}°</p>
             <h3>03.00</h3>
-            <p>{this.props.temperatureForecastArr[25]}</p>
+            <p>{this.props.temperatureForecastArr[25]}°</p>
             <h3>06.00</h3>
-            <p>{this.props.temperatureForecastArr[26]}</p>
+            <p>{this.props.temperatureForecastArr[26]}°</p>
             <h3>09.00</h3>
-            <p>{this.props.temperatureForecastArr[27]}</p>
+            <p>{this.props.temperatureForecastArr[27]}°</p>
             <h3>12.00</h3>
-            <p>{this.props.temperatureForecastArr[28]}</p>
+            <p>{this.props.temperatureForecastArr[28]}°</p>
             <h3>15.00</h3>
-            <p>{this.props.temperatureForecastArr[29]}</p>
+            <p>{this.props.temperatureForecastArr[29]}°</p>
             <h3>18.00</h3>
-            <p>{this.props.temperatureForecastArr[30]}</p>
+            <p>{this.props.temperatureForecastArr[30]}°</p>
             <h3>21.00</h3>
-            <p>{this.props.temperatureForecastArr[31]}</p>
+            <p>{this.props.temperatureForecastArr[31]}°</p>
           </div>
         );
         break;
-      
+
       default:
         content = "";
     }
 
     return (
-      <div>
+      <div id="forecastId">
         <div>
-        <h2>Temperature Forecast</h2>
-        <button onClick={this.toggleOne}>{this.props.dayOne}</button>
-        <button onClick={this.toggleTwo}>{this.props.dayTwo}</button>
-        <button onClick={this.toggleThree}>{this.props.dayThree}</button>
-        <button onClick={this.toggleFour}>{this.props.dayFour}</button>
+          <h2>Temperature Forecast</h2>
+          <button onClick={this.toggleOne}>{this.props.dayOne}</button>
+          <button onClick={this.toggleTwo}>{this.props.dayTwo}</button>
+          <button onClick={this.toggleThree}>{this.props.dayThree}</button>
+          <button onClick={this.toggleFour}>{this.props.dayFour}</button>
         </div>
         <div>{content}</div>
       </div>

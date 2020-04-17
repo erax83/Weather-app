@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherToday from "./WeatherToday";
 import WeatherForecast from "./WeatherForecast";
+import "./Weathercalls.css";
 
 export default class Weathercalls extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class Weathercalls extends React.Component {
       todaysTemperatures: {},
 
       forecastTemperature: {},
-      
+
       forecastDates: {
         dayOne: "",
         dayTwo: "",
@@ -61,13 +62,23 @@ export default class Weathercalls extends React.Component {
     );
     const response = await api_call.json();
 
+    let kelvinToCelcius = Math.round(response.main.temp - 273.15);
+
+    let secRise = response.sys.sunrise;
+    let dateRise = new Date(secRise * 1000);
+    let timeRise = dateRise.toLocaleTimeString();
+
+    let secSet = response.sys.sunset;
+    let dateSet = new Date(secSet * 1000);
+    let timeSet = dateSet.toLocaleTimeString();
+
     this.setState({
       place: response.name,
-      temperature: response.main.temp,
+      temperature: kelvinToCelcius,
       windSpeed: response.wind.speed,
       humidity: response.main.humidity,
-      sunrise: response.sys.sunrise,
-      sunset: response.sys.sunset,
+      sunrise: timeRise,
+      sunset: timeSet,
     });
   };
 
@@ -88,15 +99,15 @@ export default class Weathercalls extends React.Component {
     let forecastCount = 0;
 
     for (let i = 0; i < response.list.length; i++) {
-      if (response.list[i].dt_txt.slice(8, 10) == today) {
-        responseArrToday[todayCount] = response.list[i].main.temp;
+      if (response.list[i].dt_txt.slice(8, 10) === today) {
+        responseArrToday[todayCount] = Math.round(response.list[i].main.temp - 273.15);
         responseArrTodayTime[todayCount] = response.list[i].dt_txt.slice(
           11,
           19
         );
         todayCount++;
       } else {
-        responseArrForecast[forecastCount] = response.list[i].main.temp;
+        responseArrForecast[forecastCount] = Math.round(response.list[i].main.temp - 273.15);
         responseArrForecastDate[forecastCount] = response.list[i].dt_txt.slice(
           0,
           10
@@ -162,6 +173,7 @@ export default class Weathercalls extends React.Component {
 
     return (
       <div>
+        
         <main>
           <WeatherToday
             place={this.state.place}

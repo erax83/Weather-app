@@ -13,13 +13,14 @@ import Weathercalls from "./components/Weathercalls";
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <header>
+      <div id="wrapper">
+        <header id="heading">
           <h1>Weather Report</h1>
         </header>
-        <main>
+        <div>
           <Weathercalls></Weathercalls>
-        </main>
+        </div>
+          
       </div>
     );
   }
