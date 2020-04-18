@@ -1,22 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
+
+
 body {
     font-family: Helvetica;
+    width: 100vw;
+    padding: 0%;
+}
+
+hr {
+    margin: 25px;
+}
+
+#headingId {
+    background-color: lightsteelblue;
+
+}
+
+button {
+    border: none;
+    background-color: lightsalmon;
+    margin: 5px;
 }
 
 h1 {
     font-family: 'Russo One', sans-serif;
 }
 
-@media only screen and (max-width: 673px) {
-    body {
-        background-color: aquamarine;
-        line-height: normal;
-    }
+h2,
+h3,
+h4,
+p {
+    font-size: smaller;
+}
 
+
+@media only screen and (max-width: 673px) {
     #wrapper {
         display: grid;
-        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto ;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
         grid-template-columns: auto auto auto auto auto auto;
         gap: 10px;
         width: 100vw;
@@ -24,21 +46,26 @@ h1 {
     }
 
     #headingId {
+
         grid-area: 1 / 1 / 4 / 7;
-        background-color: salmon;
+        padding: 17px;
     }
 
-    
+}
 
-    h2, h3, h4  {
-        font-size: smaller;
+@media only screen and (min-width: 674px) {
+    #wrapper {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        width: 100vw;
+        height: 100vh;
     }
 
-    p {
-        font-size: smaller;
+    #headingId {
+        grid-area: 1 / 1 / 2 / 4;
+        padding: 14px;
     }
-
-    
-
 
 }

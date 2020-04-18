@@ -1,23 +1,55 @@
 body {
-    background-color: aquamarine;
-    line-height: 1.5em;
+    background-color: floralwhite;
+    line-height: 0.6em;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 673px) {
+    #todayId {
+        padding: 10px;
+        grid-area: 1 / 1 / 3 / 7;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
     
+    #forecastId {
+        padding: 10px;
+        grid-area: 4 / 3 / 5 / 4;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+    
+    #forecastContent {
+        grid-area: 1 / 2 / 9 / 3;
+    }
 }
 
-#mainId {
-    grid-area: 7 / 1 / 13 / 7;
-    background-color: pink;
-}
+@media only screen and (min-width: 674px) {
+    #todayId {
+        padding: 10px;
+        grid-area: 2 / 1 / 5 / 4;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
 
-
-#todayId {
-    grid-area: 1 / 1 / 3 / 3;
-    background-color: aqua;
-    width: 100%;
-}
-
-#forecastId {
-    grid-area: 4 / 3 / 5 / 4;
-    background-color: aquamarine;
+    #forecastId {
+        padding: 10px;
+        grid-area: 5 / 1 / 7 / 4;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+    
 }
 

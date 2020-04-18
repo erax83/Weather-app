@@ -1,6 +1,11 @@
 import React from "react";
 import "./Weathercalls.css";
 
+// This component renders four buttons that are marked with the dates for the upcoming days.
+// Each button makes a call to a seperate togglemethod. These methods change the
+// value of the state show. Depending on which value this state has, different blocks of
+// code (corresponding to the selected date) are then displayed with the swich case
+// in the render block.
 export default class WeatherForecast extends React.Component {
   constructor(props) {
     super(props);
@@ -70,6 +75,7 @@ export default class WeatherForecast extends React.Component {
       case 1:
         content = (
           <div>
+            <h2>{this.props.dayOne}</h2>
             <h3>00.00</h3>
             <p>{this.props.temperatureForecastArr[0]}°</p>
             <h3>03.00</h3>
@@ -92,6 +98,7 @@ export default class WeatherForecast extends React.Component {
       case 2:
         content = (
           <div>
+            <h2>{this.props.dayTwo}</h2>
             <h3>00.00</h3>
             <p>{this.props.temperatureForecastArr[8]}°</p>
             <h3>03.00</h3>
@@ -114,6 +121,7 @@ export default class WeatherForecast extends React.Component {
       case 3:
         content = (
           <div>
+            <h2>{this.props.dayThree}</h2>
             <h3>00.00</h3>
             <p>{this.props.temperatureForecastArr[16]}°</p>
             <h3>03.00</h3>
@@ -136,6 +144,7 @@ export default class WeatherForecast extends React.Component {
       case 4:
         content = (
           <div>
+            <h2>{this.props.dayFour}</h2>
             <h3>00.00</h3>
             <p>{this.props.temperatureForecastArr[24]}°</p>
             <h3>03.00</h3>
@@ -164,12 +173,25 @@ export default class WeatherForecast extends React.Component {
       <div id="forecastId">
         <div>
           <h2>Temperature Forecast</h2>
-          <button onClick={this.toggleOne}> <h3>{this.props.dayOne}</h3></button>
-          <button onClick={this.toggleTwo}><h3>{this.props.dayTwo}</h3></button>
-          <button onClick={this.toggleThree}><h3>{this.props.dayThree}</h3></button>
-          <button onClick={this.toggleFour}><h3>{this.props.dayFour}</h3></button>
+          <button onClick={this.toggleOne}>
+            {" "}
+            <h3>{this.props.dayOne}</h3>
+          </button>
+          <br></br>
+          <button onClick={this.toggleTwo}>
+            <h3>{this.props.dayTwo}</h3>
+          </button>
+          <br></br>
+          <button onClick={this.toggleThree}>
+            <h3>{this.props.dayThree}</h3>
+          </button>
+          <br></br>
+          <button onClick={this.toggleFour}>
+            <h3>{this.props.dayFour}</h3>
+          </button>
+          <br></br>
         </div>
-        <div>{content}</div>
+        <div id="forecastContent">{content}</div>
       </div>
     );
   }
