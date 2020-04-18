@@ -164,10 +164,10 @@ export default class WeatherForecast extends React.Component {
       <div id="forecastId">
         <div>
           <h2>Temperature Forecast</h2>
-          <button onClick={this.toggleOne}>{this.props.dayOne}</button>
-          <button onClick={this.toggleTwo}>{this.props.dayTwo}</button>
-          <button onClick={this.toggleThree}>{this.props.dayThree}</button>
-          <button onClick={this.toggleFour}>{this.props.dayFour}</button>
+          <button onClick={this.toggleOne}> <h3>{this.props.dayOne}</h3></button>
+          <button onClick={this.toggleTwo}><h3>{this.props.dayTwo}</h3></button>
+          <button onClick={this.toggleThree}><h3>{this.props.dayThree}</h3></button>
+          <button onClick={this.toggleFour}><h3>{this.props.dayFour}</h3></button>
         </div>
         <div>{content}</div>
       </div>

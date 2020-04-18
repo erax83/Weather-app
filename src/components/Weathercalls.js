@@ -173,8 +173,7 @@ export default class Weathercalls extends React.Component {
 
     return (
       <div>
-        
-        <main>
+        <div id="mainId">
           <WeatherToday
             place={this.state.place}
             temperature={this.state.temperature}
@@ -192,7 +191,7 @@ export default class Weathercalls extends React.Component {
             dayFour={this.state.forecastDates.dayFour}
             temperatureForecastArr={temperatureForecastArr}
           ></WeatherForecast>
-        </main>
+        </div>
       </div>
     );
   }

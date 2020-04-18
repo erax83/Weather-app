@@ -14,12 +14,13 @@ export default class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <header id="heading">
+        <header id="headingId">
           <h1>Weather Report</h1>
         </header>
-        <div>
+        
+        <main>
           <Weathercalls></Weathercalls>
-        </div>
+        </main>
           
       </div>
     );

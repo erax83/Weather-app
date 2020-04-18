@@ -1,0 +1,23 @@
+body {
+    background-color: aquamarine;
+    line-height: 1.5em;
+    
+}
+
+#mainId {
+    grid-area: 7 / 1 / 13 / 7;
+    background-color: pink;
+}
+
+
+#todayId {
+    grid-area: 1 / 1 / 3 / 3;
+    background-color: aqua;
+    width: 100%;
+}
+
+#forecastId {
+    grid-area: 4 / 3 / 5 / 4;
+    background-color: aquamarine;
+}
+

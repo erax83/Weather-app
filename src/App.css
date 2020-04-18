@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 body {
-    
+    font-family: Helvetica;
+}
 
+h1 {
     font-family: 'Russo One', sans-serif;
 }
 
 @media only screen and (max-width: 673px) {
     body {
         background-color: aquamarine;
+        line-height: normal;
     }
 
     #wrapper {
@@ -20,13 +23,22 @@ body {
         height: 100vh;
     }
 
-
-    #heading {
+    #headingId {
         grid-area: 1 / 1 / 4 / 7;
-        
-        
-        background-color: blueviolet;
+        background-color: salmon;
     }
+
+    
+
+    h2, h3, h4  {
+        font-size: smaller;
+    }
+
+    p {
+        font-size: smaller;
+    }
+
+    
 
 
 }
