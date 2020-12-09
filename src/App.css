@@ -13,8 +13,7 @@ hr {
 }
 
 #headingId {
-    background-color: lightsteelblue;
-
+    background-image: linear-gradient(to right, lightsteelblue, white);
 }
 
 button {
