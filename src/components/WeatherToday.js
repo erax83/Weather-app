@@ -16,7 +16,7 @@ export default class WeatherToday extends React.Component {
   // state decide if the upcoming temperatures for the current day
   // is to be displayed or not.
   toggleLater() {
-    if (this.state.laterShow == false) {
+    if (this.state.laterShow === false) {
       this.setState({
         laterShow: true,
       });
@@ -68,7 +68,7 @@ export default class WeatherToday extends React.Component {
         : "";
 
     // laterToday contain timestamps and temperatures for the rest of the current day.
-    if (laterShowNow == true) {
+    if (laterShowNow === true) {
       laterToday = (
         <div>
           <h3> {this.props.todaysTimestamps[0]} </h3>
